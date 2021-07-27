@@ -29,3 +29,16 @@ const totalGeral = carrinho
     .reduce(somar);
 
 console.log(totalGeral);
+
+//Meu reduce
+Array.prototype.MeuReduce = function (fn, inicial) {
+    let acc = inicial;
+    for (let i = 0; i < this.length; i++) {
+        if (!acc && i === 0) {
+            acc = this[i];
+        } else {
+            acc = fn(acc, this[i], i, this)
+        }
+    }
+    return acc;
+}
