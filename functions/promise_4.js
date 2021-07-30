@@ -29,4 +29,4 @@ gerarVariosNumeros()
     .then(console.log)
     .then(() => {
         console.timeEnd('promise');
-    })
+    });
